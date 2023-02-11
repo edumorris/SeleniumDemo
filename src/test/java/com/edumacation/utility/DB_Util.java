@@ -1,4 +1,4 @@
-package com.cydeo.utility;
+package com.edumacation.utility;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.cydeo.utility.ConfigReader.confRead;
+import static com.edumacation.utility.ConfigReader.confRead;
 
 public class DB_Util {
 

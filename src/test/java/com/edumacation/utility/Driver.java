@@ -1,4 +1,4 @@
-package com.cydeo.utility;
+package com.edumacation.utility;
 
 /*
     This class will return a single driver object, regardless of the number of times it is called
@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
-import static com.cydeo.utility.ConfigReader.confRead;
+import static com.edumacation.utility.ConfigReader.confRead;
 
 public class Driver {
 //    private static WebDriver obj;

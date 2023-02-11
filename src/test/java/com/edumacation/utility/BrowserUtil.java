@@ -1,4 +1,4 @@
-package com.cydeo.utility;
+package com.edumacation.utility;
 
 import org.openqa.selenium.WebElement;
 

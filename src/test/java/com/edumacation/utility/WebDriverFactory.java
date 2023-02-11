@@ -1,11 +1,11 @@
 package com.edumacation.utility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.OperaDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
 
 public class WebDriverFactory {
     /*
@@ -31,7 +31,7 @@ public class WebDriverFactory {
                 break;
             case "opera":
                 WebDriverManager.operadriver().setup();
-                driver = new OperaDriver();
+                driver = (WebDriver) new OperaDriverManager();
                 break;
             default:
                 driver = null;
