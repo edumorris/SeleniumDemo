@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class AddAndRemoveElementSteps {
     AddAndRemoveElementPage addRemovePage = new AddAndRemoveElementPage();
-    @And("user open the {string} page")
+    @And("the user clicks the {string} link")
     public void userOpenThePage(String addAndRemoveElementLinkText) {
         clickLink(addAndRemoveElementLinkText);
     }

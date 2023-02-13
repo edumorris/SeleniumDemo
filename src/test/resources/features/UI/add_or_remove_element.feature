@@ -4,7 +4,7 @@ Feature: Test adding or removing element
 
   Background:
     Given user opens the "the_internet_url" page
-    And user open the "Add/Remove Elements" page
+    And the user clicks the "Add/Remove Elements" link
     And the user clicks the "Add Element" button
 
   Scenario: Testing appearing elements
