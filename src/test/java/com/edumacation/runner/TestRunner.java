@@ -17,7 +17,7 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 //@ConfigurationParameter(key = "cucumber.glue", value = "com.edumacation.steps")
 @ConfigurationParameter(key= PLUGIN_PUBLISH_ENABLED_PROPERTY_NAME, value = "true")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME  ,
-        value = "pretty, json:target/cucumber.json, html:target/cucumber.html" )
+        value = "pretty, json:target/cucumber.json, html:target/cucumber.html, rerun:target/rerun.txt" )
 //@ConfigurationParameter(key= EXECUTION_DRY_RUN_PROPERTY_NAME , value = "false")
 @ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME , value = "@wip" )
 public class TestRunner {

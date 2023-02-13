@@ -10,13 +10,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePageTest {
     HomePage homePage = new HomePage();
-    @Given("user opens the 'the-internet' page")
-    public void userOpensTheInternetPage() {
-        getDriver().get(confRead("the_internet_url"));
+
+    @Given("user opens the {string} page")
+    public void userOpensThePage(String webURL) {
+        getDriver().get(confRead(webURL));
     }
 
-    @Then("the title 'Welcome to the-internet' should exists")
-    public void theTitleWelcomeToTheInternetShouldExists() {
-        assertEquals(homePage.getHomePageHeading().getText(), "Welcome to the-internet");
+    @Then("the title {string} should exists")
+    public void theTitleShouldExists(String checkString) {
+        assertEquals(homePage.getHomePageHeading().getText(), checkString);
     }
 }

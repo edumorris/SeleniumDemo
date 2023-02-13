@@ -3,6 +3,11 @@ Feature: # Enter feature name here
   # Enter feature description here
 
   @wip
-  Scenario: # Enter scenario name here
-    Given user opens the 'the-internet' page
-    Then the title 'Welcome to the-internet' should exists
+  Scenario: The Internet Homepage Title Check
+    Given user opens the "the_internet_url" page
+    Then the title "Welcome to the-internet" should exists
+
+  @wip
+  Scenario: Failing test homepage check
+    Given user opens the "the_internet_url" page
+    Then the title "Welcome to the internet" should exists
