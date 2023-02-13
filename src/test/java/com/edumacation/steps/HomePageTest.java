@@ -4,8 +4,7 @@ import com.edumacation.pages.HomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-import static com.edumacation.utility.ConfigReader.confRead;
-import static com.edumacation.utility.Driver.getDriver;
+import static com.edumacation.pages.HomePage.goTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePageTest {
@@ -13,7 +12,7 @@ public class HomePageTest {
 
     @Given("user opens the {string} page")
     public void userOpensThePage(String webURL) {
-        getDriver().get(confRead(webURL));
+        goTo(webURL);
     }
 
     @Then("the title {string} should exists")
