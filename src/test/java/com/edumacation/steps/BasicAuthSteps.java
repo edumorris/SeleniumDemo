@@ -23,6 +23,7 @@ public class BasicAuthSteps {
     @When("the user enters the correct {string} and {string}")
     public void theUserEntersTheCorrectAnd(String uname, String pwd) {
         try {
+            // Will not work using alert. Fix for HTTPClient
             WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
             // Switch to the alert
