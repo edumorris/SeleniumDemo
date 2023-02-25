@@ -1,6 +1,6 @@
 @web-ui
 Feature: Context Menu
-  This feature test custom context menu is triggered
+  This feature tests custom context menu is triggered
 
   Background:
     Given user opens the "the_internet_url" page
