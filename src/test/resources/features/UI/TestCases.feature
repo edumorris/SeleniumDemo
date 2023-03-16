@@ -1,4 +1,4 @@
-# ToDo: Drag and Drop
+# ToDo: Drag and drop
 # ToDo: Dropdown
 # ToDo: Dynamic Content
 # ToDo: Dynamic Controls
