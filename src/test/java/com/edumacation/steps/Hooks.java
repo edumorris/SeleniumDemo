@@ -3,6 +3,7 @@ package com.edumacation.steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -19,6 +20,12 @@ public class Hooks {
 
         // Maximize window size
         getDriver().manage().window().maximize();
+    }
+
+    @Before("@skip-scenario")
+    public void skipScenario(Scenario scenario) {
+        System.out.println("Skip scenario: " + scenario.getName());
+        Assume.assumeTrue(false);
     }
 
     @After("@web-ui")
