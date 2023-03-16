@@ -15,7 +15,7 @@ public class Hooks {
     @Before("@web-ui") // From cucumber
     public void setupDriver() {
         // Implicit Wait
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         // Maximize window size
         getDriver().manage().window().maximize();
