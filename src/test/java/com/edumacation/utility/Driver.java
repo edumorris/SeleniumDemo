@@ -8,7 +8,9 @@ package com.edumacation.utility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -58,16 +60,23 @@ public class Driver {
                 if (driver_pool.get() == null) {
                     switch (browser.toLowerCase()) {
                         case "chrome":
+                             // Fix for local connection
+                            ChromeOptions chromeOptions = new ChromeOptions();
+                            chromeOptions.addArguments("--remote-allow-origins=*");
+
                             WebDriverManager.chromedriver().setup();
-                            driver_pool.set(new ChromeDriver());
+                            driver_pool.set(new ChromeDriver(chromeOptions));
                             break;
                         case "firefox":
                             WebDriverManager.firefoxdriver().setup();
                             driver_pool.set(new FirefoxDriver());
                             break;
                         case "edge":
+                            EdgeOptions edgeOptions = new EdgeOptions();
+                            edgeOptions.addArguments("--remote-allow-origins=*");
+
                             WebDriverManager.edgedriver().setup();
-                            driver_pool.set(new EdgeDriver());
+                            driver_pool.set(new EdgeDriver(edgeOptions));
                             break;
                         default:
                             driver_pool.set(null);

@@ -41,9 +41,9 @@ public class DB_Util {
      */
     public static void createConnection(){
 
-        String url      = confRead("hr.database.url") ;
-        String username = confRead("hr.database.username") ;
-        String password = confRead("hr.database.password") ;
+        String url      = confRead("hr.database.url") ; // change to string url
+        String username = confRead("hr.database.username") ; // db username
+        String password = confRead("hr.database.password") ; // db password
         try {
             con = DriverManager.getConnection(url , username, password) ;
             System.out.println("CONNECTION SUCCESSFUL");
