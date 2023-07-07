@@ -1,6 +1,5 @@
 @web-ui
 Feature: Drag & Drop
-  # This feature has an issue on the UI side that needs fixing.
   This feature tests the drag & drop capabilities of a page
 
   Background:
