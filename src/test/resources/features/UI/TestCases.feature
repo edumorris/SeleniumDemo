@@ -2,7 +2,6 @@
 # ToDo: Dynamic Content
 # ToDo: Dynamic Controls
 # ToDo: Dynamic Loading
-# ToDo: Entry Ad
 # ToDo: Exit Intent
 # ToDo: File Download
 # ToDo: File Upload
