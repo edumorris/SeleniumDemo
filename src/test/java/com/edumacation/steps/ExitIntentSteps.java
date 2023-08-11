@@ -47,7 +47,7 @@ public class ExitIntentSteps {
     public void theUserShouldHaveAModalPopupDisplayed() {
         waitFor(5);
 
-        assertThat(exitIntentPage.getModalWindow().isDisplayed(), is(true));
+        assertThat(exitIntentPage.isModalDisplayed(), is(true));
     }
 
     @And("the modal popup is closed")
@@ -64,7 +64,7 @@ public class ExitIntentSteps {
     @Then("the modal popup should not be displayed")
     public void theModalPopupShouldNotBeDisplayed() {
 
-        assertThat(exitIntentPage.getModalWindow().isDisplayed(), is(false));
+        assertThat(exitIntentPage.isModalDisplayed(), is(false));
 
     }
 }
